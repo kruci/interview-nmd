@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, configureStore } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { UploadFile } from "antd";
 
 export type Book = {
@@ -41,12 +41,3 @@ const bookSlice = createSlice({
 export const { addBook, modifyBook, deleteBook } = bookSlice.actions;
 
 export const bookReducer = bookSlice.reducer;
-
-export const store = configureStore({
-  reducer: {
-    books: bookReducer,
-  },
-});
-
-export type RootState = ReturnType<typeof store.getState>;
-export type StoreDispatch = typeof store.dispatch;

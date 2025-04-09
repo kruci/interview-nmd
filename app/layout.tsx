@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { App } from "antd";
-import { BookStoreProvider } from "./books/booksStore/provider";
+import { BookStoreProvider } from "./books/store/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

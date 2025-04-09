@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import { AddBookSection } from "./books/addBookSection/AddBookSection";
+import { BookLibrarySection } from "./books/booksLibrary/BookLibrarySection";
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
         <section className={styles.section}>
           <AddBookSection />
         </section>
-        <section className={styles.section}>TODO</section>
+        <section className={styles.section}>
+          <BookLibrarySection />
+        </section>
       </main>
     </div>
   );

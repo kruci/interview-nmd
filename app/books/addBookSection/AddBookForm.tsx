@@ -10,7 +10,8 @@ import { Form, Input, Button, App } from "antd";
 import { UploadImageFormItem } from "./UploadImageFormItem";
 import styles from "./AddBookForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addBook, Book, RootState, StoreDispatch } from "../booksStore/store";
+import { addBook, Book } from "../store/booksSlice";
+import { RootState, StoreDispatch } from "../store/appStore";
 
 export const AddBookForm = () => {
   const dispatch = useDispatch<StoreDispatch>();
