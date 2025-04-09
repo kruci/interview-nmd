@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: rgb(240, 240, 240);
   --foreground: #171717;
 }
 
@@ -7,6 +7,10 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+.ant-app {
+  min-height: 100%;
 }
 
 body {

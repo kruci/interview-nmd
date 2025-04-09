@@ -1,5 +1,7 @@
 .page {
-  padding: 80px;
+  padding: 40px;
+  display: flex;
+  min-height: 100%;
 }
 
 .main {
@@ -7,11 +9,16 @@
   flex-direction: row;
   gap: 32px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  max-width: 1200px;
+  flex: 1;
 }
 
 .section {
   flex: 1;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
 }
 
 @media (max-width: 600px) {
@@ -23,5 +30,9 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .section {
+    padding: 6px;
   }
 }
