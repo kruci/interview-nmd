@@ -1,0 +1,13 @@
+.upload {
+  height: 66px;
+
+  /*fix for picture name overflow on small devices*/
+  display: grid;
+  :global(.ant-upload-list) {
+    overflow: hidden;
+  }
+
+  :global(.ant-upload-list-item) {
+    margin-top: 0 !important;
+  }
+}

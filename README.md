@@ -22,9 +22,14 @@
 - should be responsive
 - no data persistance required
 
-### Solution
+### Proposed Solution
 
 - I will write **everything in english** in case I want to use this for future :)
 - Will **use nextjs** so it follows the tech stack in company (but I will use version 15, as this is rare oportunity to use the most recent version)
 - I will use **antd for UI**, as it is batteries included, including the infinity list and forms
 - I will use **fusejs so we can have fuzzy search for the book titles**
+- I will use **redux** for the state management (books)
+
+### Notes from development
+
+- Using nextjs 15 with antd was a blunder as antd is not yet updated to work with react 19 properly, and currently has a bunch of limitations for SSR. I chose to go ahead like this, as nextjs 15 uses Server components by default, and fix for antd is to just change components that use chaned antd names to client components. Once antd is chatched up with nextj, it would mean just removing `"use client";` from app files.
