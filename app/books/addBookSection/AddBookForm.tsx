@@ -5,33 +5,71 @@
  * See https://github.com/ant-design/ant-design-examples/blob/main/examples/with-nextjs-app-router-inline-style/src/app/with-sub-components/page.tsx
  */
 "use client";
-import React from "react";
-import { Form, Input, Button, App, UploadFile } from "antd";
+import React, { useState } from "react";
+import { Form, Input, Button, App } from "antd";
 import { UploadImageFormItem } from "./UploadImageFormItem";
 import styles from "./AddBookForm.module.css";
-
-type BookInfo = {
-    name: string
-    author ?: string
-    description?: string
-    picture ?: UploadFile
-}
+import { useDispatch, useSelector } from "react-redux";
+import { addBook, Book, RootState, StoreDispatch } from "../booksStore/store";
 
 export const AddBookForm = () => {
-  const { message } = App.useApp();
-  const [form] = Form.useForm<BookInfo>();
+  const dispatch = useDispatch<StoreDispatch>();
+  const books = useSelector((state: RootState) => state.books.books);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onFinish = (values: BookInfo) => {
-    console.log("Success", values);
+  const { message } = App.useApp();
+  const [form] = Form.useForm<Book>();
+
+  const validateTitleNotTaken = async (_: any, title: string) => {
+    const isAvailable = books.every((book) => book.title !== title);
+    if (!isAvailable) {
+      return Promise.reject("This name is already taken.");
+    }
+    return Promise.resolve();
+  };
+
+  const handleSubmit = async (values: Book) => {
+    setIsLoading(true);
+    dispatch(addBook(values));
+    /*
+     We can handle networking in middleware, in which case it would return 
+     promise, and we would show success only if request finished with success
+
+     I personally would use purely react query for "books state" management instead
+     of redux, but because we do not have real networking in this demo app, I will go
+     with redux :)
+     (Or plug react query to redux)
+     */
     message.success("Book was added to the database");
+
+    // Simulate network
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    form.resetFields();
+    setIsLoading(false);
+  };
+
+  // This should newer happen in this demo app, its here just for illustration
+  const handleSubmitFailed = () => {
+    setIsLoading(false);
+    message.error("Something went wrong");
   };
 
   return (
-    <Form layout="vertical" onFinish={onFinish} autoComplete="off" form={form}>
+    <Form
+      layout="vertical"
+      onFinish={handleSubmit}
+      onFinishFailed={handleSubmitFailed}
+      autoComplete="off"
+      form={form}
+    >
       <Form.Item
         name="title"
         label="Title"
-        rules={[{ required: true, message: "This field is required!" }]}
+        rules={[
+          { required: true, message: "This field is required!" },
+          { validator: validateTitleNotTaken },
+        ]}
       >
         <Input />
       </Form.Item>
@@ -45,7 +83,12 @@ export const AddBookForm = () => {
         <UploadImageFormItem />
       </Form.Item>
       <Form.Item>
-        <Button type="primary" htmlType="submit" className={styles.submit}>
+        <Button
+          type="primary"
+          htmlType="submit"
+          className={styles.submit}
+          loading={isLoading}
+        >
           Submit
         </Button>
       </Form.Item>
