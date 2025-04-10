@@ -1,0 +1,7 @@
+.list {
+  :global(.ant-spin-container) {
+    max-height: 450px;
+    overflow: auto;
+    padding: 4px;
+  }
+}
