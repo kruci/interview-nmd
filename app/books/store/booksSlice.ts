@@ -25,6 +25,7 @@ const bookSlice = createSlice({
     addBook: (state, action: PayloadAction<Book>) => {
       state.books.push({ ...action.payload });
     },
+    // Will use if I will have time
     modifyBook: (state, action: PayloadAction<Book>) => {
       const index = state.books.findIndex(
         (book) => book.title === action.payload.title
@@ -33,6 +34,7 @@ const bookSlice = createSlice({
         state.books[index] = action.payload;
       }
     },
+    // Will use if I will have time
     deleteBook: (state, action: PayloadAction<string>) => {
       state.books = state.books.filter((book) => book.title !== action.payload);
     },

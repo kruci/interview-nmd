@@ -11,11 +11,24 @@ type BookModalProps = {
 export const BookModal = ({ book, onClose }: BookModalProps) => {
   const imageBlobUrl = useBookPictureBlob(book);
 
+  /*
+    If we move these memos into separate component called inside the modal, we
+    can avoid uneceserly processing things that will not be rendered
+
+    Will fix if I will have time
+  */
   const renderedPicture = useMemo(() => {
     if (!book?.picture) {
       return <>No picture</>;
     }
 
+    /**
+     * If we got here, it means that we have the file, but
+     * we might wait for the imageBlobUrl to be created, in which case
+     * we should show loader
+     *
+     * Will add if I will have time
+     */
     return <Image src={imageBlobUrl} alt="Book picture" />;
   }, [book?.picture, imageBlobUrl]);
 
