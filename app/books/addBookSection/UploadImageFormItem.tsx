@@ -4,6 +4,9 @@ import { UploadOutlined } from "@ant-design/icons";
 import { UploadChangeParam } from "antd/es/upload";
 import styles from "./UploadImageFormItem.module.css";
 
+/**
+ * All props are optional, as they are passed by parent Form.Item instead of developer
+ */
 type UploadImageFormItemProps = {
   value?: UploadFile;
   onChange?: (value: UploadFile) => void;

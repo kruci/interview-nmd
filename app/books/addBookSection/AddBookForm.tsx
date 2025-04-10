@@ -1,9 +1,3 @@
-/**
- * Antd chained components name (e.g. `Form.Item`) do not work with next app router
- *
- * See https://ant.design/docs/react/use-with-next
- * See https://github.com/ant-design/ant-design-examples/blob/main/examples/with-nextjs-app-router-inline-style/src/app/with-sub-components/page.tsx
- */
 "use client";
 import React, { useState } from "react";
 import { Form, Input, Button, App } from "antd";
@@ -37,9 +31,7 @@ export const AddBookForm = () => {
      promise, and we would show success only if request finished with success
 
      I personally would use purely react query for "books state" management instead
-     of redux, but because we do not have real networking in this demo app, I will go
-     with redux :)
-     (Or plug react query to redux)
+     of redux (Or plug react query to redux)
      */
     message.success("Book was added to the database");
 
@@ -77,7 +69,12 @@ export const AddBookForm = () => {
         <Input />
       </Form.Item>
       <Form.Item name="description" label="Description">
-        <Input.TextArea maxLength={300} rows={4} showCount />
+        <Input.TextArea
+          maxLength={300}
+          rows={4}
+          showCount
+          className={styles.textArea}
+        />
       </Form.Item>
       <Form.Item name="picture" label="Picture">
         <UploadImageFormItem />

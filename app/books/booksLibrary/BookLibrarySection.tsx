@@ -1,7 +1,7 @@
 "use client";
 import { Typography } from "antd";
 import { Search } from "./Search";
-import { BooksList } from "./BooksList";
+import { BooksList } from "./BookList/BooksList";
 
 export const BookLibrarySection = () => {
   return (

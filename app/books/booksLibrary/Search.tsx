@@ -9,14 +9,14 @@ import { useCallback, useMemo } from "react";
 export const Search = () => {
   const dispatch = useDispatch<StoreDispatch>();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const debouncedHandleChange = useCallback(
-    debounce((event: React.ChangeEvent<HTMLInputElement>) => {
+  const debouncedHandleChange = useMemo(() => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = event.target.value;
       dispatch(updateSearchValue(newValue));
-    }, 400),
-    [dispatch]
-  );
+    };
+
+    return debounce(handleChange, 400);
+  }, [dispatch]);
 
   const handleClear = useCallback(() => {
     dispatch(updateSearchValue(""));

@@ -1,18 +1,18 @@
 "use client";
 import { List } from "antd";
-import { Book } from "../store/booksSlice";
+import { Book } from "../../store/booksSlice";
 import styles from "./BookListItem.module.css";
-import { useCallback } from "react";
+import { useCallback, memo } from "react";
 
 type BookListItemProps = {
   book: Book;
   onClick: (book: Book) => void;
 };
 
-export const BookListItem = ({ book, onClick }: BookListItemProps) => {
+const BookListItemInternal = ({ book, onClick }: BookListItemProps) => {
   const handleClick = useCallback(() => onClick(book), [book, onClick]);
 
-  // Cannot use antd typography ellipsis as it causes lag
+  // Cannot use antd typography ellipsis as it causes lag on scroll
   const renderWithEllipsis = useCallback(
     (value: string) => <span className={styles.ellipsis}>{value}</span>,
     []
@@ -27,3 +27,5 @@ export const BookListItem = ({ book, onClick }: BookListItemProps) => {
     </List.Item>
   );
 };
+
+export const BookListItem = memo(BookListItemInternal);
