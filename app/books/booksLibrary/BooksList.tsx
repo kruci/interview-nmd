@@ -6,6 +6,7 @@ import styles from "./BookList.module.css";
 import { useCallback, useState } from "react";
 import { Book } from "../store/booksSlice";
 import { BookModal } from "./BookModal";
+import VirtualList from "rc-virtual-list";
 
 export const BooksList = () => {
   const [selectedBook, setSelectedBook] = useState<Book>();
@@ -23,13 +24,22 @@ export const BooksList = () => {
   return (
     <>
       <List className={styles.list}>
-        {books.map((book) => (
-          <BookListItem
-            book={book}
-            key={book.title}
-            onClick={handleBookClick}
-          />
-        ))}
+        <VirtualList
+          data={books}
+          height={450}
+          itemHeight={73}
+          itemKey="title"
+          // We would load more data from API here
+          //onScroll={...}
+        >
+          {(book: Book) => (
+            <BookListItem
+              book={book}
+              key={book.title}
+              onClick={handleBookClick}
+            />
+          )}
+        </VirtualList>
       </List>
       <BookModal book={selectedBook} onClose={handleModalClose} />
     </>

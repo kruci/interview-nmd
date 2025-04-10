@@ -1,7 +1,5 @@
 .list {
-  :global(.ant-spin-container) {
-    max-height: 450px;
-    overflow: auto;
-    padding: 4px;
+  :global(.rc-virtual-list-holder-inner) {
+    padding: 0 4px;
   }
 }
