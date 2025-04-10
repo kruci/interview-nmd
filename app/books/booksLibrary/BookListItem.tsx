@@ -12,11 +12,17 @@ type BookListItemProps = {
 export const BookListItem = ({ book, onClick }: BookListItemProps) => {
   const handleClick = useCallback(() => onClick(book), [book, onClick]);
 
+  // Cannot use antd typography ellipsis as it causes lag
+  const renderWithEllipsis = useCallback(
+    (value: string) => <span className={styles.ellipsis}>{value}</span>,
+    []
+  );
+
   return (
     <List.Item className={styles.item} onClick={handleClick}>
       <List.Item.Meta
-        title={book.title}
-        description={book.author || "unknown"}
+        title={renderWithEllipsis(book.title)}
+        description={renderWithEllipsis(book.author || "Not provided")}
       />
     </List.Item>
   );

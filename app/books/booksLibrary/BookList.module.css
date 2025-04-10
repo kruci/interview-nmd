@@ -1,5 +1,3 @@
-.list {
-  &:global(.rc-virtual-list-holder-inner) {
-    padding: 0 4px;
-  }
+.list :global(.rc-virtual-list-holder-inner) {
+  padding: 0 4px;
 }

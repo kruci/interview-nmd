@@ -19,7 +19,7 @@ export const BookModal = ({ book, onClose }: BookModalProps) => {
   */
   const renderedPicture = useMemo(() => {
     if (!book?.picture) {
-      return <>No picture</>;
+      return <>Not provided</>;
     }
 
     /**
@@ -41,7 +41,7 @@ export const BookModal = ({ book, onClose }: BookModalProps) => {
         </a>
       );
     }
-    return <>{book?.description ?? ""}</>;
+    return <>{book?.description ?? "Not provided"}</>;
   }, [book?.description]);
 
   return (
@@ -57,7 +57,7 @@ export const BookModal = ({ book, onClose }: BookModalProps) => {
           },
           {
             label: "Author",
-            children: book?.author,
+            children: book?.author || 'Not provided',
           },
           {
             label: "Description",
