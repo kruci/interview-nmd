@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { UploadFile } from "antd";
+import MockBooks from "./books.mock.json";
 
 export type Book = {
   //id: string; // We will use title as ID for simplicity
@@ -14,7 +15,7 @@ type BookState = {
 };
 
 const initialState: BookState = {
-  books: [],
+  books: MockBooks as Book[],
 };
 
 const bookSlice = createSlice({

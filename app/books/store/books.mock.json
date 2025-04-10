@@ -1,0 +1,252 @@
+[
+    {
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "description": "https://openlibrary.org/works/OL66554W"
+    },
+    {
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "description": "https://openlibrary.org/works/OL138052W"
+    },
+    {
+        "author": "Bible",
+        "title": "Bible",
+        "description": "https://openlibrary.org/works/OL17732W"
+    },
+    {
+        "author": "Charles Dickens",
+        "title": "A Christmas Carol",
+        "description": "https://openlibrary.org/works/OL8193497W"
+    },
+    {
+        "author": "Mark Twain",
+        "title": "Adventures of Huckleberry Finn",
+        "description": "https://openlibrary.org/works/OL53908W"
+    },
+    {
+        "author": "Oscar Wilde",
+        "title": "The Picture of Dorian Gray",
+        "description": "https://openlibrary.org/works/OL8193416W"
+    },
+    {
+        "author": "Charles Dickens",
+        "title": "Oliver Twist",
+        "description": "https://openlibrary.org/works/OL8193478W"
+    },
+    {
+        "author": "Mary Shelley",
+        "title": "Frankenstein or The Modern Prometheus",
+        "description": "https://openlibrary.org/works/OL450063W"
+    },
+    {
+        "author": "Charles Dickens",
+        "title": "A Tale of Two Cities",
+        "description": "https://openlibrary.org/works/OL8193465W"
+    },
+    {
+        "author": "L. Frank Baum",
+        "title": "The Wonderful Wizard of Oz",
+        "description": "https://openlibrary.org/works/OL18417W"
+    },
+    {
+        "author": "Jane Austen",
+        "title": "Sense and Sensibility",
+        "description": "https://openlibrary.org/works/OL66562W"
+    },
+    {
+        "author": "Robert Louis Stevenson",
+        "title": "Treasure Island",
+        "description": "https://openlibrary.org/works/OL24034W"
+    },
+    {
+        "author": "Louisa May Alcott",
+        "title": "Little Women",
+        "description": "https://openlibrary.org/works/OL29983W"
+    },
+    {
+        "author": "Miguel de Cervantes Saavedra",
+        "title": "Don Quixote",
+        "description": "https://openlibrary.org/works/OL503666W"
+    },
+    {
+        "author": "Gustave Flaubert",
+        "title": "Madame Bovary",
+        "description": "https://openlibrary.org/works/OL893707W"
+    },
+    {
+        "author": "Charles Dickens",
+        "title": "Great Expectations",
+        "description": "https://openlibrary.org/works/OL8721462W"
+    },
+    {
+        "author": "孙武",
+        "title": "The Art of War",
+        "description": "https://openlibrary.org/works/OL244537W"
+    },
+    {
+        "author": "Niccolò Machiavelli",
+        "title": "The Prince",
+        "description": "https://openlibrary.org/works/OL1089297W"
+    },
+    {
+        "author": "Jack London",
+        "title": "The Call of the Wild",
+        "description": "https://openlibrary.org/works/OL14942956W"
+    },
+    {
+        "author": "Dante Alighieri",
+        "title": "Divina Commedia",
+        "description": "https://openlibrary.org/works/OL93082W"
+    },
+    {
+        "author": "Arthur Conan Doyle",
+        "title": "The Hound of the Baskervilles",
+        "description": "https://openlibrary.org/works/OL262454W"
+    },
+    {
+        "author": "Lucy Maud Montgomery",
+        "title": "Anne of Green Gables",
+        "description": "https://openlibrary.org/works/OL77746W"
+    },
+    {
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes [12 stories]",
+        "description": "https://openlibrary.org/works/OL262421W"
+    },
+    {
+        "author": "Alexandre Dumas",
+        "title": "Les Trois Mousquetaires",
+        "description": "https://openlibrary.org/works/OL36861W"
+    },
+    {
+        "author": "Voltaire",
+        "title": "Candide",
+        "description": "https://openlibrary.org/works/OL100672W"
+    },
+    {
+        "author": "Frederick Douglass",
+        "title": "Narrative of the life of Frederick Douglass",
+        "description": "https://openlibrary.org/works/OL69178W"
+    },
+    {
+        "author": "Solomon Northup",
+        "title": "Twelve years a slave",
+        "description": "https://openlibrary.org/works/OL78871W"
+    },
+    {
+        "author": "Washington Irving",
+        "title": "The Legend of Sleepy Hollow",
+        "description": "https://openlibrary.org/works/OL63985W"
+    },
+    {
+        "author": "Edith Nesbit",
+        "title": "The Railway Children",
+        "description": "https://openlibrary.org/works/OL99509W"
+    },
+    {
+        "author": "William Shakespeare",
+        "title": "Romeo and Juliet",
+        "description": "https://openlibrary.org/works/OL362427W"
+    },
+    {
+        "author": "William Shakespeare",
+        "title": "Macbeth",
+        "description": "https://openlibrary.org/works/OL258902W"
+    },
+    {
+        "author": "Edith Nesbit",
+        "title": "Five Children and It",
+        "description": "https://openlibrary.org/works/OL99499W"
+    },
+    {
+        "author": "Rudyard Kipling",
+        "title": "Kim",
+        "description": "https://openlibrary.org/works/OL19908W"
+    },
+    {
+        "author": "Frances Hodgson Burnett",
+        "title": "The Secret Garden",
+        "description": "https://openlibrary.org/works/OL69612W"
+    },
+    {
+        "author": "Лев Толстой",
+        "title": "Anna Karenina",
+        "description": "https://openlibrary.org/works/OL267096W"
+    },
+    {
+        "author": "Mark Twain",
+        "title": "The Adventures of Tom Sawyer",
+        "description": "https://openlibrary.org/works/OL53919W"
+    },
+    {
+        "author": "James Fenimore Cooper",
+        "title": "The Last of the Mohicans",
+        "description": "https://openlibrary.org/works/OL77958W"
+    },
+    {
+        "author": "Charles Dickens",
+        "title": "David Copperfield",
+        "description": "https://openlibrary.org/works/OL8662242W"
+    },
+    {
+        "author": "Charles Dickens",
+        "title": "The Old Curiosity Shop",
+        "description": "https://openlibrary.org/works/OL14869167W"
+    },
+    {
+        "author": "Nathaniel Hawthorne",
+        "title": "The Scarlet Letter",
+        "description": "https://openlibrary.org/works/OL25074095W"
+    },
+    {
+        "author": "Lucy Maud Montgomery",
+        "title": "Anne of Avonlea",
+        "description": "https://openlibrary.org/works/OL77744W"
+    },
+    {
+        "author": "Πλάτων",
+        "title": "πολιτεία",
+        "description": "https://openlibrary.org/works/OL51831W"
+    },
+    {
+        "author": "Mark Twain",
+        "title": "A Connecticut Yankee in King Arthur's Court",
+        "description": "https://openlibrary.org/works/OL54031W"
+    },
+    {
+        "author": "Charlotte Brontë",
+        "title": "Jane Eyre",
+        "description": "https://openlibrary.org/works/OL1095427W"
+    },
+    {
+        "author": "Lucy Maud Montgomery",
+        "title": "Anne's House of Dreams",
+        "description": "https://openlibrary.org/works/OL77764W"
+    },
+    {
+        "author": "Lucy Maud Montgomery",
+        "title": "Anne of the Island",
+        "description": "https://openlibrary.org/works/OL77748W"
+    },
+    {
+        "author": "William Shakespeare",
+        "title": "The Merchant of Venice",
+        "description": "https://openlibrary.org/works/OL258758W"
+    },
+    {
+        "author": "Mark Twain",
+        "title": "The Prince and the Pauper",
+        "description": "https://openlibrary.org/works/OL53994W"
+    },
+    {
+        "author": "Alexandre Dumas",
+        "title": "Le Comte de Monte Cristo",
+        "description": "https://openlibrary.org/works/OL36287W"
+    },
+    {
+        "author": "Jerome Klapka Jerome",
+        "title": "Three Men in a Boat (to say nothing of the dog)",
+        "description": "https://openlibrary.org/works/OL1793164W"
+    }
+]
