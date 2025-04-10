@@ -15,8 +15,7 @@ export const UploadImageFormItem = ({
 }: UploadImageFormItemProps) => {
   const [hasFile, setHasFile] = useState(false);
 
-  const handleUploadChange = (info: UploadChangeParam<UploadFile<any>>) => {
-    console.log(info);
+  const handleUploadChange = (info: UploadChangeParam<UploadFile>) => {
     const file = info?.fileList?.[0];
     onChange?.(file);
     setHasFile(!!file);

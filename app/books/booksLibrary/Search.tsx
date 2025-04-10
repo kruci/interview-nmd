@@ -1,5 +1,5 @@
 import { SearchOutlined } from "@ant-design/icons";
-import { Input, Tooltip } from "antd";
+import { Input } from "antd";
 import { useDispatch } from "react-redux";
 import { StoreDispatch } from "../store/appStore";
 import { updateSearchValue } from "../store/bookSearchSlice";
@@ -23,11 +23,7 @@ export const Search = () => {
   }, [dispatch]);
 
   const renderedInputSuffix = useMemo(
-    () => (
-      <Tooltip title="Extra information">
-        <SearchOutlined style={{ color: "rgba(0,0,0,.45)" }} />
-      </Tooltip>
-    ),
+    () => <SearchOutlined style={{ color: "rgba(0,0,0,.45)" }} />,
     []
   );
 

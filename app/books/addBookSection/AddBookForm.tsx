@@ -21,7 +21,7 @@ export const AddBookForm = () => {
   const { message } = App.useApp();
   const [form] = Form.useForm<Book>();
 
-  const validateTitleNotTaken = async (_: any, title: string) => {
+  const validateTitleNotTaken = async (_: unknown, title: string) => {
     const isAvailable = books.every((book) => book.title !== title);
     if (!isAvailable) {
       return Promise.reject("This name is already taken.");
@@ -50,10 +50,9 @@ export const AddBookForm = () => {
     setIsLoading(false);
   };
 
-  // This should newer happen in this demo app, its here just for illustration
   const handleSubmitFailed = () => {
     setIsLoading(false);
-    message.error("Something went wrong");
+    message.error("Cannot submit with invalid data");
   };
 
   return (

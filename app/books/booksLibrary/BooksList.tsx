@@ -17,7 +17,7 @@ export const BooksList = () => {
   );
 
   const fuseInstance = useMemo(() => {
-    return new Fuse(books, { keys: ["title"] , threshold: 0.3});
+    return new Fuse(books, { keys: ["title"], threshold: 0.3 });
   }, [books]);
 
   const filteredBooks = useMemo(() => {
@@ -32,7 +32,6 @@ export const BooksList = () => {
   }, []);
 
   const handleModalClose = useCallback(() => {
-    console.log("Closing modal");
     setSelectedBook(undefined);
   }, []);
 
